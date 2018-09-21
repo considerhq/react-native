@@ -396,8 +396,6 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
 
   _onSelectionChange(@{
     @"selection": @{
-      @"start": @(selection.start),
-      @"end": @(selection.end),
       @"cursorPositionX": @(selection.cursorPosition.x),
       @"cursorPositionY": @(selection.cursorPosition.y),
     },
