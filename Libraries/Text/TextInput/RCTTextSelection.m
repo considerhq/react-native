@@ -28,6 +28,7 @@
   if ([json isKindOfClass:[NSDictionary class]]) {
     NSInteger start = [self NSInteger:json[@"start"]];
     NSInteger end = [self NSInteger:json[@"end"]];
+
     CGPoint cursorPosition = CGPointMake(
       [self CGFloat:json[@"cursorPositionX"]],
       [self CGFloat:json[@"cursorPositionY"]]

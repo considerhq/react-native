@@ -131,9 +131,9 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithFrame:(CGRect)frame)
 
   [attributedTextCopy removeAttribute:RCTTextAttributesTagAttributeName
                                 range:NSMakeRange(0, attributedTextCopy.length)];
-  
+
   textNeedsUpdate = ([self textOf:attributedTextCopy equals:backedTextInputViewTextCopy] == NO);
-  
+
   if (eventLag == 0 && textNeedsUpdate) {
     UITextRange *selection = self.backedTextInputView.selectedTextRange;
     NSInteger oldTextLength = self.backedTextInputView.attributedText.string.length;

@@ -619,6 +619,8 @@ const TextInput = createReactClass({
     selection: PropTypes.shape({
       start: PropTypes.number.isRequired,
       end: PropTypes.number,
+      cursorPositionX: PropTypes.number,
+      cursorPositionY: PropTypes.number,
     }),
     /**
      * The value to show for the text input. `TextInput` is a controlled
@@ -984,6 +986,8 @@ const TextInput = createReactClass({
       props.selection = {
         start: props.selection.start,
         end: props.selection.start,
+        cursorPositionX: props.selection.cursorPositionX,
+        cursorPositionY: props.selection.cursorPositionY,
       };
     }
 
@@ -1174,7 +1178,12 @@ const TextInput = createReactClass({
     }
 
     if (this.props.selectionState && selection) {
-      this.props.selectionState.update(selection.start, selection.end);
+      this.props.selectionState.update(
+        selection.start,
+        selection.end,
+        selection.cursorPositionX,
+        selection.cursorPositionY,
+      );
     }
   },
 
